@@ -1,0 +1,15 @@
+<div class = "container">
+    <h1>Recipes! {{ welcome_name }}!</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="/post/{{ post.id }}/">{{ recipe.title }} - by {{ recipe.author.name }}</a>
+                <ul>
+                    <li>
+                        {{ recipe.body }}
+                    </li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
