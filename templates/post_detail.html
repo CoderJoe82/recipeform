@@ -3,7 +3,8 @@
         <h1>This is not the post you are looking for!</h1>
     {% else %}
         <h2>{{ post.title }}</h2>
-        <h4>{{ post.author.name }}</h4>
+        <h4>By: {{ post.author.name }}</h4>
         <p>{{ post.body }}</p>
     {% endif %}
+    <a href = "/">Back Home!</a>
 </div>

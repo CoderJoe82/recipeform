@@ -1,0 +1,14 @@
+<div class = "container">
+    {% for auth in authors %}
+
+    <h1>Here are {{ auth.name }}'s recipes!</h1>
+    {%  for recipe in recipes %}
+        <li>
+            <a href="/recipe/{{ recipe.id }}/">{{ recipe.title }}</a>
+        </li>
+    {% endfor %}
+    <br>
+    <br><br>
+    {% endfor %}
+    <a href = "/">Back Home!</a>
+</div>

@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from homepage.views import index, post_detail
+from homepage.views import index, post_detail, recipe_list
 
 """localhost:8000/post/3"""
 
 urlpatterns = [
     path('', index),
-    path('post/<int:post_id>/', post_detail),
+    path('recipe/<int:post_id>/', post_detail),
+    path("author/<int:id>", recipe_list),
     path('admin/', admin.site.urls),
 ]
